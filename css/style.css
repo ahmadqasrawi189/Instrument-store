@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+body {
+    font-family: 'varela round' , sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.section-h {
+    text-align: center;
+}
+.section-t{
+    margin: 50px 0 10px 0;
+    font-size: 35px;
+}
+.section-s {
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #766161;
+    margin: 0  auto  20px  auto;
+    transition: width 0.7s;
+}
+.section-h:hover .section-s{
+    width: 150px;
+}
+/* 1- Header Section....................... */
+header {
+    padding: 50px 0;
+}
+.Hcontent{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.logo {
+    max-width: 200px;
+}
+.Hcontent nav {
+    flex: 3;
+    text-align: center;
+}
+.Hicons {
+    text-align: right;
+}
+.logo ,.Hicons {
+    flex: 1;
+}
+.Hcontent ul li {
+    display: inline-block;
+}
+.Hcontent ul li a , .Htable td a ,.Htable th {
+    color: rgb(56, 56, 56);
+}
+.hitem {
+    position: relative;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 5px 15px;
+    display: block;
+}
+.hitem::before , .hitem::after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s;
+}
+.hitem::before {
+    border-width: 0 2px;
+    height: 100%;
+    width: 95%;
+    transform: scale3d(1, 0, 1);
+}
+.hitem:hover::before{
+    transform: scale3d(1, 1, 1);
+}
+.hitem::after {
+    border-width: 2px 0;
+    height: 90%;
+    width: 98%;
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+    transition-delay:0.2s ;
+}
+.hitem:hover::after{
+    transform: scale3d(1, 1, 1);
+}
+.Hicons ul li {
+    margin: 0px 10px;
+    font-weight: bold;
+}
+.tabled {
+    position: relative;
+}
+.Htable {
+    position: absolute;
+    background-color: #f4f6f9;
+    height: 200px;
+    width: 400px;
+    margin-top: 8px;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transition:  0.5s ;
+}
+.tabled:hover .Htable {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+ }
+ .fa-0 {
+    height: 20px;
+    width: 20x;
+    border-radius: 50%;
+    background-color: #5A72A0;
+    padding: 2px 5px;
+    margin-left: -25px;
+}
+ .yb {
+    margin-left: -25px;
+ }
+ /* 2- Main Section....................... */
+.Mcontent {
+    background-image: url(../images/cover.png);
+    height: 500px;
+    background-size: cover;
+    padding-left: 80px;
+    padding-top: 180px;
+}
+.Mt {
+    color: #FDFFE2 ;
+    font-size: 45px;  
+}
+.btn {
+    margin: 50px 0px;
+    width: 100px;
+    height: 30px;
+    border: 0;
+}
+ /* 2- categories Section....................... */
+.bs-items {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:10px;
+    margin-bottom: 30px;
+}
+.item-ship {
+    color: gray;
+    margin-top: 50px;
+    font-size: 22px;
+    font-weight: normal;
+}
+.bs-item {
+    position: relative;
+}
+.bs-icon {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 10px;
+    font-size: 30px;
+    color: #87A7B3;
+    visibility: hidden;
+}
+.bs-item:hover .bs-icon {
+    visibility: visible;
+}
+.bs-par {
+    display: flex;
+}
+.parat {
+    position: relative;
+    flex: 2;
+    background-color: #87A7B3 ;
+    padding: 25px;
+}
+.para-icon {
+    font-size: 60px;
+    color: #766161;
+}
+.parah {
+    position: absolute;
+    top: 35px;
+    left: 80px;
+    font-size: 25px;
+}
+.parast {
+    position: absolute;
+    top: 65px;
+    left: 80px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.parap {
+    margin-top: 20px;
+    font-size: 22px;
+    word-spacing: 3px;
+}
+.dis-item {
+    position: relative;
+    flex: 1;
+    height: 300px;
+    padding: 15px 0 0 15px;
+    margin-left: 10px;
+}
+.dis-item h3 {
+    color: #87A7B3;
+    font-size: 22px;
+    font-weight: normal;
+}
+.dis-item h2 {
+    color: #E1F1DD;
+}
+.dsimg1 {
+    background-image: url(../images/disc1.png);
+}
+.dsimg2 {
+    background-image: url(../images/disc2.png);
+}
+.dsimg1:hover , .dsimg2:hover {
+    transform: scale(1.1); 
+}
+.dsimg2 , .dsimg1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.7s;
+}
+.lines {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+.lines span {
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    background-color: #766161;
+    margin:10px 5px 0px 0px ;
+}
+.dis-icons {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 30px 0px;
+    text-align: center;
+    border-bottom: 1px solid #87A7B3 ;
+    padding-bottom: 70px;
+}
+.dis-icons h3 {
+    font-size: 25px;
+    margin: 10px;
+}
+.dis-icons span {
+    font-size: 22px;
+    color: gray;
+}
+.lborder {
+    border-right: 2px solid #87A7B3 ;
+}
+.di {
+    width: 65px;
+    height: 65px;
+    background-image: url(../images/icons.png);
+    background-repeat: no-repeat;
+    margin: auto;   
+}
+.di1{
+    background-position: -5px -80px;
+}
+.di2{
+    background-position: -330px -80px;
+}
+.di3 {
+    background-position: -135px -80px;
+}
+.di4{
+    background-position: -200px -80px;
+}
+.di5 {
+    background-position: -400px -80px;
+}
+.dis-icon:hover .di1 {
+    background-position: -5px -5px;
+}
+.dis-icon:hover .di2 {
+    background-position: -330px -5px;
+}
+.dis-icon:hover .di3 {
+    background-position: -135px -5px;
+}
+.dis-icon:hover .di4 {
+    background-position: -200px -5px;
+}
+.dis-icon:hover .di5 {
+    background-position: -400px -5px;
+}
+.dis-icon:hover .di1  , .dis-icon:hover .di2 , .dis-icon:hover .di3 , .dis-icon:hover .di4 , .dis-icon:hover .di5 {
+    transition: 0.3s ;}
+/* 5- featured products  Section.................... */
+.FPlist {
+    text-align: center;
+}
+.FPlist span {
+    margin: 30px 20px;
+}
+.FPitems{
+    display: grid;
+    grid-template-columns:  repeat(3,1fr);
+    margin: 40px 0;
+    grid-gap: 20px;
+}
+.FPimg img {
+    border: 1px solid #766161;
+    padding: 15px;
+}
+.FPimg {
+    position: relative;
+}
+.FPback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.FPback ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.FPback ul li {
+    display: inline-block;
+    font-size: 45px;
+    color: #002379;
+}
+.FPitem:hover .FPback {
+    transform: scaleX(1);
+}
+.colordstar {
+    margin-top: 15px;
+    color: yellow;
+}
+.FPbackinfo h4 {
+    font-weight: normal;
+    font-size: 17px;
+    margin: 5px 0;
+}
+
